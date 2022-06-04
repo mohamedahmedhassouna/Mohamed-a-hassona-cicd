@@ -164,7 +164,6 @@ jobs:
             npm audit --audit-level=critical
   deploy-infrastructure:
     docker:
-      # Docker image here that supports AWS CLI
       - image: cimg/base:stable
     steps:
       - checkout
