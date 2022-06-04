@@ -55,7 +55,7 @@ commands:
           when: on_fail
           command: |
       
-            SUCCESS=$(curl --insecure  https://kvdb.io/N9XNJ6UAPJzcwfnL2WhoDz/migration_<< parameters.workflowID >>)
+            SUCCESS=$(curl --insecure  https://kvdb.io/GUUirg67qDbRk9Qa1uyN21/migration_<< parameters.workflowID >>)
             if(( $SUCCESS==1 )); 
             then
               cd ~/project/backend
@@ -250,7 +250,7 @@ jobs:
           command: |
             if grep -q "has been executed successfully." ~/project/backend/migrations_dump.txt
             then
-              curl https://kvdb.io/N9XNJ6UAPJzcwfnL2WhoDz/migration_${CIRCLE_WORKFLOW_ID:0:7}  -d '1'
+              curl https://kvdb.io/GUUirg67qDbRk9Qa1uyN21/migration_${CIRCLE_WORKFLOW_ID:0:7}  -d '1'
             fi
               
       - destroy-environment:
