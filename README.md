@@ -1,6 +1,4 @@
-
-## Give your Application Auto-Deploy Superpowers
-
+## CI/CD Pipeline for UdaPeople 
 
 ### Built With
 
